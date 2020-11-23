@@ -18,8 +18,8 @@ jobs:
     - name: Create Build Environment
       run: ${{ github.workspace }}/.github/workflows/install-mulle-sde.sh
 
-    - name: Add to path
-      run:  echo "$HOME/bin' >> $GITHUB_PATH
+    - name: Add ~/bin to PATH
+      run:  echo "$HOME/bin" >> $GITHUB_PATH
 
     - name: Dump Build Environment
       run:  env
