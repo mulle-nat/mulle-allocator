@@ -2,4 +2,5 @@
 
 curl -L -O 'https://raw.githubusercontent.com/mulle-sde/mulle-sde/release/bin/installer-all' && \
 chmod 755 installer-all && \
-SDE_PROJECTS="mulle-objc-developer;latest" ./installer-all ~ no
+OTHER_PROJECTS="mulle-c/mulle-c-developer;latest" \
+SDE_PROJECTS="mulle-sde-developer;latest" ./installer-all ~ no
