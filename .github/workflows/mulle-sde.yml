@@ -22,7 +22,8 @@ jobs:
       run:  echo "$HOME/bin" >> $GITHUB_PATH
 
     - name: Dump Build Environment
-      run:  env
+      run:  |
+            env | sort
 
     - name: Mulle-SDE Fetch
       shell: bash
