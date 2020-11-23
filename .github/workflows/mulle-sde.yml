@@ -16,7 +16,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Create Build Environment
-      run: ${{ github.workspace }}/.github/workflow/install-mulle-sde.sh
+      run: ${{ github.workspace }}/.github/workflows/install-mulle-sde.sh
 
     - name: Mulle-SDE Fetch
       shell: bash
