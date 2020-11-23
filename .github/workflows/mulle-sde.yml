@@ -10,13 +10,16 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [macos-latest, windows-latest, ubuntu-latest]
+        os: [macos-latest, ubuntu-latest]
 
     steps:
     - uses: actions/checkout@v2
 
     - name: Create Build Environment
       run: ${{ github.workspace }}/.github/workflows/install-mulle-sde.sh
+
+    - name: Dump Build Environment
+      run:  env
 
     - name: Mulle-SDE Fetch
       shell: bash
