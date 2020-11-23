@@ -1,0 +1,30 @@
+name: MulleSDE
+
+on: [push]
+
+env:
+  BUILD_TYPE: release
+
+jobs:
+  build:
+    runs-on: [ ubuntu-latest, macos-latest ]
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Create Build Environment
+      run: curl -L -O 'https://raw.githubusercontent.com/mulle-sde/mulle-sde/release/bin/installer-all' && \
+chmod 755 installer-all && \
+SDE_PROJECTS="mulle-c-developer;latest" ./installer-all ~ no
+
+    - name: Mulle-SDE Fetch
+      shell: bash
+      run: mulle-sde fetch 
+      
+    - name: Mulle-SDE Craft
+      shell: bash
+      run: mulle-sde test --${BUILD_TYPE}
+
+    - name: Mulle-SDE Test
+      shell: bash
+      run: mulle-sde test
