@@ -13,9 +13,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Create Build Environment
-      run: curl -L -O 'https://raw.githubusercontent.com/mulle-sde/mulle-sde/release/bin/installer-all' && \
-chmod 755 installer-all && \
-SDE_PROJECTS="mulle-c-developer;latest" ./installer-all ~ no
+      run: .github/workflow/install-mulle-sde.sh
 
     - name: Mulle-SDE Fetch
       shell: bash
