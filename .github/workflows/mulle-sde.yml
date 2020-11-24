@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - uses: mulle-sde/github-ci@v2
+    - uses: mulle-sde/github-ci@v1
 
     - name: Add to path
       run:  echo "$HOME/bin' >> $GITHUB_PATH
