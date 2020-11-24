@@ -14,20 +14,24 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - uses: mulle-sde/github-ci@v1
-      
-    - name: Add ~/bin to PATH
-       run:  echo "$HOME/bin" >> $GITHUB_PATH
+
+    - uses: mulle-sde/github-ci@v2
+
+    - name: Add to path
+      run:  echo "$HOME/bin' >> $GITHUB_PATH
 
     - name: Dump Build Environment
-       run:  |
-             env | sort
+      run:  env
 
     - name: Mulle-SDE Fetch
-       run: mulle-sde fetch 
+      shell: bash
+      run: mulle-sde fetch 
       
     - name: Mulle-SDE Craft
-       run: mulle-sde craft --${BUILD_TYPE:-release}
+      shell: bash
+      run: mulle-sde test --${BUILD_TYPE}
 
     - name: Mulle-SDE Test
-       run: mulle-sde test
+      shell: bash
+      run: mulle-sde test
+      
