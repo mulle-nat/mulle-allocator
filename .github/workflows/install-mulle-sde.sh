@@ -1,7 +1,7 @@
 #! /bin/sh
 
 OTHER_PROJECTS="mulle-c/mulle-c-developer;latest
-"mulle-sde/mulle-test;latest"
+mulle-sde/mulle-test;latest"
 SDE_PROJECTS="mulle-sde-developer;latest" 
 
 export SDE_PROJECTS
