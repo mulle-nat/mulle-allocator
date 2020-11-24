@@ -18,20 +18,17 @@ jobs:
     - uses: mulle-sde/github-ci@v1
 
     - name: Add to path
-      run:  echo "$HOME/bin' >> $GITHUB_PATH
+      run:  echo "$HOME/bin" >> $GITHUB_PATH
 
     - name: Dump Build Environment
       run:  env
 
     - name: Mulle-SDE Fetch
-      shell: bash
       run: mulle-sde fetch 
       
     - name: Mulle-SDE Craft
-      shell: bash
-      run: mulle-sde test --${BUILD_TYPE}
+      run: mulle-sde test --${BUILD_TYPE:-release}
 
     - name: Mulle-SDE Test
-      shell: bash
       run: mulle-sde test
       
