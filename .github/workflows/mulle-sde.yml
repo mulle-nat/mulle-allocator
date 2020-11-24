@@ -14,25 +14,4 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-
-    - name: Create Build Environment
-      run: ${{ github.workspace }}/.github/workflows/install-mulle-sde.sh
-
-    - name: Add ~/bin to PATH
-      run:  echo "$HOME/bin" >> $GITHUB_PATH
-
-    - name: Dump Build Environment
-      run:  |
-            env | sort
-
-    - name: Mulle-SDE Fetch
-      shell: bash
-      run: mulle-sde fetch 
-      
-    - name: Mulle-SDE Craft
-      shell: bash
-      run: mulle-sde craft --${BUILD_TYPE}
-
-    - name: Mulle-SDE Test
-      shell: bash
-      run: mulle-sde test
+    - uses: mulle-sde/github-ci
