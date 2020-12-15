@@ -1,0 +1,16 @@
+{
+   "name" : "mulle-allocator",
+   "version" : "4.2.2",
+   "description" : "🔄 Flexible C memory allocation scheme",
+   "homepage" : "https://github.com/mulle-c/mulle-allocator",
+   "bugs" : "https://github.com/mulle-c/mulle-allocator/issues",
+   "keywords" : [],
+   "license" : "BSD-3-Clause",
+   "repository" : {
+      "type" : "git",
+      "url" : "github:mulle-c/mulle-allocator"
+   },
+   "dependencies" : {
+      "mulle-c11" : "https://github.com/mulle-c/mulle-c11/archive/latest.tar.gz"
+   }
+}
