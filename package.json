@@ -11,6 +11,6 @@
       "url" : "github:mulle-c/mulle-allocator"
    },
    "dependencies" : {
-      "mulle-c11" : "https://github.com/mulle-c/mulle-c11/archive/latest.tar.gz"
+      "mulle-c11" : "latest"
    }
 }
