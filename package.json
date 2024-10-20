@@ -11,6 +11,6 @@
       "url" : "github:mulle-nat/mulle-allocator"
    },
    "dependencies" : {
-      "mulle-c11" : "git://github.com/mulle-c/mulle-c11"
+      "mulle-c11" : "git://github.com/mulle-nat/mulle-c11"
    }
 }
